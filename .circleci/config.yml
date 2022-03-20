@@ -30,7 +30,7 @@ jobs:
       - checkout
       - run:
           name: "Print hello"
-          command: "echo hello"
+          command: echo "hello"
   print_world:
     docker:
       - image: cimg/base:stable
