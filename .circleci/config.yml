@@ -21,7 +21,7 @@ jobs:
       - checkout
       - run:
         name: "Print hello"
-          command: "echo hello"
+        command: "echo hello"
   print_world:
       - checkout
       - run:
