@@ -38,7 +38,7 @@ jobs:
       - checkout
       - run: echo "world"
   pipeline:
-        docker:
+    docker:
       - image: cimg/base:stable
     steps:
       - checkout
