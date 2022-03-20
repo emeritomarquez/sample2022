@@ -37,6 +37,13 @@ jobs:
     steps:
       - checkout
       - run: echo "world"
+  pipeline:
+        docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo "My pipeline id is << pipeline.id >> and my git branch is << pipeline.git.branch >>."
+
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
@@ -49,6 +56,6 @@ workflows:
       - print_world:
           requires:
             - print_hello
-
+      - pipeline
 
 
