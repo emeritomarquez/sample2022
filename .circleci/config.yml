@@ -42,8 +42,11 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run: echo "My pipeline id is << pipeline.id >> and my git branch is << pipeline.git.branch >>."
-
+      - run: 
+          - echo "My pipeline id is << pipeline.id >> and my git branch is << pipeline.git.branch >>."
+          - echo "My pipeline number is << pipeline.number >>"
+          - echo "My triggering git even url is << pipeline.project.git_url >>"
+          - echo "My project type is << pipeline.project.type >>"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
