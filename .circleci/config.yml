@@ -17,11 +17,23 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-
+  print_hello:
+      - checkout
+      - run:
+          name: Print "hello"
+          command: "echo hello"
+  print_world:
+      - checkout
+      - run:
+          name: Print "world"
+          command: "echo world"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      - print_hello
+      - print_world
+
 
