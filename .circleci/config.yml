@@ -20,12 +20,12 @@ jobs:
   print_hello:
       - checkout
       - run:
-          name: Print "hello"
+        name: "Print hello"
           command: "echo hello"
   print_world:
       - checkout
       - run:
-          name: Print "world"
+          name: "Print world"
           command: "echo world"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
